@@ -1,0 +1,123 @@
+[GET] https://api.movieflix.com/catalogue
+
+Response: { 
+    "catalogue": [
+        {
+            "id" : 1,
+            "name" : "The lion king",
+            "year" : "1994",
+            "genre": "Animation"
+        },
+        {
+            "id" : 2,
+            "name" : "The Matrix",
+            "year" : "1999",
+            "genre": "Action" 
+        },
+        {
+            "id" : 3
+            "name" : "Scream",
+            "year" : "1996",
+            "genre": "Horror"
+        }
+    ]
+}
+Status code: 200 (OK)
+
+
+[POST] https://api.movieflix.com/catalogue
+[Body] { 
+            "name" : "The Avengers",
+            "year" : "2012",
+            "genre": "Action"
+        }
+
+Response: { 
+            "id" : 4
+            "name" : "The Avengers",
+            "year" : "2012",
+            "genre": "Action"
+        }
+Status code: 201 (Created)
+
+
+[PUT] https://api.movieflix.com/catalogue/1
+[Body] { 
+            "genre": "Childrens film"
+        }
+
+Response: {
+            "id" : 1,
+            "name" : "The lion king",
+            "year" : "1994",
+            "genre": "Childrens film"
+        }
+Status code: 201 (Created)
+
+
+[DELETE] https://api.movieflix.com/catalogue/4
+
+Status code: 200 (OK)
+
+
+
+[GET] https://api.movieflix.com/users
+
+Response: { 
+    "users": [
+        {
+            "id" : 1,
+            "name" : "Maria Martinez",
+            "date of birth" : "1994",
+            "subscription": "On"
+        },
+        {
+            "id" : 2,
+            "name" : "Juanito Perez",
+            "date of birth" : "1979",
+            "subscription": "On" 
+        },
+        {
+            "id" : 3
+            "name" : "Lucia Jimenez",
+            "date of birth" : "1965",
+            "subscription": "Off"
+        },
+    ]
+}
+Status code: 200 (OK)
+
+
+[POST] https://api.movieflix.com/users
+[Body] { 
+            "name" : "Edgar Rodriguez",
+            "date of birth" : "1996",
+            "subscription": "On"
+        }
+
+Response: { 
+            "id" : 4
+            "name" : "Edgar Rodriguez",
+            "date of birth" : "1996",
+            "subscription": "On"
+        }
+Status code: 201 (Created)
+
+
+[PUT] https://api.movieflix.com/users/3
+[Body] { 
+            "subscription": "On"
+        }
+
+Response: {
+            "id" : 3
+            "name" : "Lucia Jimenez",
+            "date of birth" : "1965",
+            "subscription": "On"
+        }
+Status code: 201 (Created)
+
+
+[DELETE] https://api.movieflix.com/users/4
+
+Status code: 200 (OK)
